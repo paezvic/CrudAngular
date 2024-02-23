@@ -1,0 +1,53 @@
+.Body{
+    padding: 10px;
+    min-width: fit-content; 
+    
+}
+.navbar{
+    background-color: rgb(115, 132, 132) !important;
+    padding: 15px !important;
+    height: 4em;
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto !important;
+
+}
+
+.table{
+    margin: 10px auto;
+
+}
+
+.NuevoUser::before{
+    content: "Nuevo";
+}
+.invisible{
+    display: none;
+}
+
+@media screen and (min-width:64em) {
+    .navbar{
+        height: 5em;
+        
+    }
+    .search{
+        width: 40rem !important;
+    }
+    .table{
+        margin: 15px auto;
+        width: 70% !important;
+    }
+    .NuevoUser::before{
+        content: "Nuevo Usuario";
+    }
+    .invisible{
+        display: none;
+    }
+    .btnupt:hover{
+        background-color: blue;
+    }
+    .btndet:hover{
+        background-color: red;
+    }
+}
+

@@ -1,0 +1,82 @@
+<div class="Body">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="btn NuevoUser btn-primary" (click)="openmodal()" ></button>
+          <form class="d-flex" role="search">
+            <input class="form-control search me-2" type="search" placeholder="Buscar" aria-label="Search" (keyup)="filtrar()" name="filtro" [(ngModel)]="filtro" >
+          </form>
+        </div>
+      </nav>
+
+      <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of userCopia; let i = index" >
+                <td>
+                    {{i+1}}
+                </td>
+                <td>
+                    {{item.name}}
+                </td>
+                <td>
+                    {{item.lastName}}
+                </td>
+                <td>
+                    {{item.email}}
+                </td>
+                <td>
+                    <button type="button" class="btn btn-success btnupt m-1 " (click)="editar(item.id)" >editar</button>
+                    <button type="button" class="btn btn-success btndet" (click)="delete(item.id)" >Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+
+
+</div>
+
+<div class="modal" id="modal" tabindex="-1" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{Tittle}}</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closemodal()" ></button>
+        </div>
+        <form (ngSubmit)="addEdit()" #form="ngForm">
+            <div class="modal-body">
+                <input type="text" class="invisible"  name="id" [(ngModel)]="ngModelUsers.id" >
+                <div class="input-group mt-3">
+                    <span class="input-group-text">
+                        Nombres
+                    </span>
+                    <input type="text" class="form-control"  name="name" [(ngModel)]="ngModelUsers.name" >
+                </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">
+                        Apellidos
+                    </span>
+                    <input type="text" class="form-control" name="lastName" [(ngModel)]="ngModelUsers.lastName" >
+                </div>
+                <div class="input-group mt-3">
+                    <span class="input-group-text">
+                        Correo
+                    </span>
+                    <input type="text" class="form-control" name="email" [(ngModel)]="ngModelUsers.email" >
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closemodal()">Cerrar</button>
+                <button type="submit"  class="btn btn-primary">{{valorBtn}}</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
