@@ -1,5 +1,6 @@
 # CrudAngular
 
+<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
 
 ## Development server
@@ -25,3 +26,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+Angular CRUD Repository
+This repository contains a CRUD (Create, Read, Update, Delete) application developed using Angular framework. CRUD operations are fundamental in application development as they facilitate basic interactions with the data.
+
+# Features
+- Create: Allows users to add new items into the system.
+- Read: Enables users to view existing items.
+- Update: Permits users to modify existing items.
+- Delete: Allows users to remove items from the system.
+>>>>>>> 5f0c279691c8a8cb4bd70921ab52694058690331
